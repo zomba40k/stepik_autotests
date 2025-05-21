@@ -5,9 +5,6 @@ from faker import Faker #Библиотека для генерации случ
 import os # Для работы с директориями
 import pyperclip #Библиотека для работы с буфером обмена
 
-
-
-
 fake = Faker() #Случайные значения
 
 current_dir = os.path.abspath(os.path.dirname(__file__))
@@ -34,9 +31,6 @@ try:
     alert_text = alert.text# Текст из алерта
     time.sleep(2)
     alert.accept()
-
-    # Делаем переменную text с информацией
-
 
     pyperclip.copy((alert_text.strip().split()[-1])) # Записываю ответ из алерта в буфер обмена
     time.sleep(1)

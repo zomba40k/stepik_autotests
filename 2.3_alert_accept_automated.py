@@ -8,8 +8,6 @@ def calc(x):
 
     return str(math.log(abs(12*math.sin(int(x)))))
 
-
-
 try:
     link = "https://suninjuly.github.io/alert_accept.html"
     browser = webdriver.Chrome()
@@ -33,9 +31,6 @@ try:
     alert_text = alert2.text# Текст из алерта
     time.sleep(2)
     alert2.accept()
-
-    # Делаем переменную text с информацией
-
 
     pyperclip.copy((alert_text.strip().split()[-1])) # Записываю ответ из алерта в буфер обмена
     time.sleep(1)

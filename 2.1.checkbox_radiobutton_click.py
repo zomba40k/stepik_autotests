@@ -5,7 +5,10 @@ import math
 
 def calc(x):
   return str(math.log(abs(12*math.sin(int(x)))))
+
+
 try:
+
     link = "https://suninjuly.github.io/math.html"
     browser = webdriver.Chrome()
     browser.get(link)
@@ -19,7 +22,10 @@ try:
     input3.click()
     input4 = browser.find_element(By.CSS_SELECTOR, "button[type='Submit']")
     input4.click()
+
+
 finally:
+
     # ожидание чтобы визуально оценить результаты прохождения скрипта
     time.sleep(5)
     # закрываем браузер после всех манипуляций

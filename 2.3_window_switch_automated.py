@@ -31,9 +31,6 @@ try:
     time.sleep(2)
     alert2.accept()
 
-    # Делаем переменную text с информацией
-
-
     pyperclip.copy((alert_text.strip().split()[-1])) # Записываю ответ из алерта в буфер обмена
     time.sleep(1)
 finally:
