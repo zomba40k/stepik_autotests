@@ -17,9 +17,9 @@ try:
     browser.implicitly_wait(5)
 
     button = browser.find_element(By.CSS_SELECTOR, '#book')
-
     WebDriverWait(browser, 10).until(expected_conditions.text_to_be_present_in_element((By.CSS_SELECTOR, '#price'),'100'))
     button.click()
+
     num = browser.find_element(By.CSS_SELECTOR, '#input_value')
     num = calc(num.text)
 
