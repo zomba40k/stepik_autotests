@@ -7,7 +7,7 @@ import time
 import pytest
 import math
 
-
+main_answer = ''
 
 try:
     with open('C:\\stepik_data\\data.txt', 'r', encoding='utf-8') as f:
@@ -30,7 +30,7 @@ class TestStepik:
     num_list = ['236895', '236896', '236897', '236898', '236899', '236903', '236904', '236905']
 
     def test_stepik_autotest(self, browser):
-
+        global main_answer
         for number in self.num_list:
             link = f'https://stepik.org/lesson/{number}/step/1'
             browser.get(link)
@@ -97,9 +97,11 @@ class TestStepik:
                 )
 
                 if hint.text != 'Correct!':
-                    self.main_answer += hint.text
-                    print(hint.text, end='')
+                    main_answer += hint.text
+
 
 
             except TimeoutException:
                 continue
+
+        print(main_answer)
